@@ -12,12 +12,27 @@ class Animal {
 		char sexo;
 		double tamanho;
 		std::string dieta;
+		std::string nome_batismo;
 		Veterinario veterinario;
 		Tratador tratador;
-		std::string nome_batismo;
+		
 	public:
 		Animal();
 		~Animal();
+		void setId(int Id);
+		int getId();
+		void setClasse(std::string classe);
+		std::string getClasse();
+		void setNomeCientifico(std::string nome_cientifico);
+		std::string getNomeCientifico();
+		void setSexo(char sexo);
+		char getSexo();
+		void setTamanho(double tamanho);
+		double getTamanho();
+		void setDieta(std::string dieta);
+		std::string getDieta();
+		void setNomeBatismo(std::string nome_batismo);
+		std::string getNomeBatismo();
 };
 		
 
