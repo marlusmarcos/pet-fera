@@ -15,9 +15,9 @@ Waiting a pdf to continue description
 
 
 ### Author's
-Eduardo 
-Marlus
-Thiago
+Eduardo; 
+Marlus;
+Tiago.
 
 ### License
 MIT
