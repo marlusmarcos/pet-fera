@@ -6,7 +6,7 @@
 
 class Animal {
 	protected:
-		int Id;
+		int id;
 		std::string classe;
 		std::string nome_cientifico;
 		char sexo;
@@ -19,7 +19,7 @@ class Animal {
 	public:
 		Animal();
 		~Animal();
-		void setId(int Id);
+		void setId(int id);
 		int getId();
 		void setClasse(std::string classe);
 		std::string getClasse();
