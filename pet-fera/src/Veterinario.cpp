@@ -1,4 +1,4 @@
-#include "Veterinario.h"
+#include "../include/Veterinario.h"
 
 Veterinario::Veterinario(){};
 Veterinario::~Veterinario(){};

@@ -1,4 +1,4 @@
-#include "Funcionario.h"
+#include "../include/Funcionario.h"
 
 Funcionario::Funcionario(){};
 Funcionario::~Funcionario(){};

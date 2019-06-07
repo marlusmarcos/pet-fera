@@ -1,10 +1,13 @@
 #ifndef _ANIMAL_H_
 #define _ANIMAL_H_
-#include <string>
-#include "Veterinario.h"
-#include "Tratador.h"
 
-class Animal {
+#include <string>
+#include "../include/Veterinario.h"
+#include "../include/Tratador.h"
+
+class Animal
+{
+    // === Atributs ===
 	protected:
 		int id;
 		std::string classe;
@@ -13,26 +16,35 @@ class Animal {
 		double tamanho;
 		std::string dieta;
 		std::string nome_batismo;
-		Veterinario veterinario;
-		Tratador tratador;
+		//TODO thiago ta fazendo essas classes.
+		//Veterinario veterinario;
+		//Tratador tratador;
 		
 	public:
+		/// Constructor
 		Animal();
+		// TODO Copy constructor
+		
+		/// Destructor
 		~Animal();
-		void setId(int id);
+
+		/// Getters
 		int getId();
-		void setClasse(std::string classe);
 		std::string getClasse();
-		void setNomeCientifico(std::string nome_cientifico);
 		std::string getNomeCientifico();
-		void setSexo(char sexo);
 		char getSexo();
-		void setTamanho(double tamanho);
 		double getTamanho();
-		void setDieta(std::string dieta);
 		std::string getDieta();
-		void setNomeBatismo(std::string nome_batismo);
 		std::string getNomeBatismo();
+
+		/// Setters
+		void setId(int id);
+		void setClasse(std::string classe);
+		void setNomeCientifico(std::string nome_cientifico);
+		void setSexo(char sexo);
+		void setTamanho(double tamanho);
+		void setDieta(std::string dieta);
+		void setNomeBatismo(std::string nome_batismo);
 };
 		
 

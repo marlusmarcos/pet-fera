@@ -1,8 +1,8 @@
 #include <iostream>
-#include "Funcionario.h"
-#include "Tratador.h"
-#include "Veterinario.h"
-#include "Animal.h"
+#include "../include/Funcionario.h"
+#include "../include/Tratador.h"
+#include "../include/Veterinario.h"
+#include "../include/Animal.h"
 
 using namespace std;
 
