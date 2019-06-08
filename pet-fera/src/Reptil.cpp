@@ -2,10 +2,9 @@
 
 Reptil::Reptil()
 
-Reptil::~Reptil() = default
-{/* empty */}
+Reptil::~Reptil() = default;
 
 
-int setIsVenenoso
+int setIsVenenoso;
 
 std::string Repil::tipo_venenoso;
