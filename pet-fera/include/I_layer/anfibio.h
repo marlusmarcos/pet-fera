@@ -1,16 +1,18 @@
-#ifndef _ANFIBIO_H_
-#define _ANFIBIO_H_
+#ifndef __ANFIBIO_H__
+#define __ANFIBIO_H__
 
-#include "../include/Animal.h"
+#include "../animal.h"
 
 
-struct Data{
+struct Data
+{
 	short int dia;
 	short int mes;
 	short int ano;
 };
 
-class Anfibio : public Animal {
+class Anfibio : public Animal 
+{
 
     protected:
 	int m_total_de_mudas;
@@ -28,5 +30,6 @@ class Anfibio : public Animal {
 	void setTotalMudas(int total_de_mudas);
 	void setData(Data data);
 };
+
 
 #endif

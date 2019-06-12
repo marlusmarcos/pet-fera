@@ -1,12 +1,13 @@
 #include <iostream>
-#include "../include/Animal.h"
+#include "../include/animal.h"
+#include "../include/I_layer/anfibio.h"
 
 int main(void)
 {
-    Animal generic;
+    Anfibio generic;
 
-    generic.setId(11111);
-    std::cout << "This is the id of animal:" << generic.getId() << std::endl;
+    generic.setTotalMudas(11111);
+    std::cout << "This is the id of animal:" << generic.getTotalMudas() << std::endl;
 
     return 0x0;
 }

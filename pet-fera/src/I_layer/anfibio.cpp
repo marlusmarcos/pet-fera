@@ -1,12 +1,10 @@
-#include "../include/Anfibio.h"
-
+#include "../../include/I_layer/anfibio.h"
 
 Anfibio::Anfibio()
-{}
+{/* empty */}
 
 
-Anfibio::~Anfibio()
-{}
+Anfibio::~Anfibio() = default;
 
 // Getters
 int Anfibio::getTotalMudas()
