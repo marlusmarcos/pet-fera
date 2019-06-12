@@ -1,9 +1,10 @@
 #ifndef __MAMIFERO_H__
 #define __MAMIFERO_H__
 
-#include "../include/animal.h"
+#include "../animal.h"
 
-class Mamifero : public Animal {
+class Mamifero : public Animal 
+{
 	protected:
 		std::string m_cor_pelo;
 	public:

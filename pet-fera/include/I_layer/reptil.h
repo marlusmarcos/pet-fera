@@ -1,7 +1,7 @@
-#ifndef _REPTIL_H_
-#define _REPTIL_H_
+#ifndef __REPTIL_H__
+#define __REPTIL_H__
 
-#include "../include/Animal.h"
+#include "../animal.h"
 
 class Reptil : public Animal 
 {
@@ -10,14 +10,14 @@ class Reptil : public Animal
 	std::string m_tipo_venenoso;
 
     public:
+	/// Constructors && Destructors
 	Reptil();
 	~Reptil();
 
-	// Getters:
+	// Getters && Setters
 	bool get_venenoso(void);
 	std::string get_tipo_venenoso(void);
 
-	// Setters
 	void set_venenoso(bool venenoso);
 	void set_tipo_venenoso(std::string tipo_venenoso);
 

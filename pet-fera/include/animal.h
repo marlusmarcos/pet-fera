@@ -24,10 +24,11 @@ class Animal
 	public:
 		/// Constructor
 		Animal();
-		// TODO Copy constructor
-		
 		/// Destructor
 		~Animal();
+
+		// TODO Do an copy constructor
+		
 
 		/// Getters
 		int get_id();

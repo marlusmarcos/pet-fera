@@ -1,7 +1,7 @@
 #ifndef __AVE_H__
 #define __AVE_H__
 
-#include "../include/Animal.h"
+#include "../animal.h"
 
 class Ave : public Animal
 {

@@ -9,7 +9,6 @@ Animal::Animal()
 
 Animal::~Animal() = default;
 
-
 // Getter
 int Animal::get_id()
 { return this->id; }
@@ -61,7 +60,7 @@ void Animal::set_tamanho(double tamanho)
 
 
 void Animal::set_dieta(std::string dieta)
-{ this->dieta = dieta; }
+{ dieta = dieta; }
 
 
 void Animal::set_nome_batismo(std::string nome_batismo)
