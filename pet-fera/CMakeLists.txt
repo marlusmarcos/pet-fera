@@ -1,20 +1,31 @@
-cmake_minimum_required(VERSION 3.13)
-project(pet fera
-    DESCRIPTION "pet fera is an sistem to manage an pet shot"
+cmake_minimum_required(VERSION 3.5)
+
+project(pet-fera VERSION 1.0
+    DESCRIPTION "pet-fera is an pet shop manager"
     LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD 17)
-set(CMAKE_CXXSTANDARD_REQUIRED ON)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-################################################
+############################################################
 
-# Setting librarys
-include_directories(include)
+# libraris
 
-################################################
-# Setting source 
+add_library(pete-fera STATIC
+    src/animal.cpp
+    src/I_layer/anfibio.cpp
+    src/I_layer/ave.cpp
+    src/I_layer/mamifero.cpp
+    src/I_layer/reptil.cpp
+    src/II_layer/anfibio_nodes/anfibio_exotico.cpp
+    src/II_layer/anfibio_nodes/anfibio_nativo.cpp
+    src/II_layer/ave_nodes/ave_exotica.cpp
+    src/II_layer/ave_nodes/ave_nativa.cpp
+    src/II_layer/mamifero_nodes/mamifero_exotico.cpp
+    src/II_layer/mamifero_nodes/mamifero_nativo.cpp
+    src/II_layer/reptil_nodes/reptil_exotico.cpp
+    src/II_layer/reptil_nodes/reptil_nativo.cpp)
 
-file(GLOB SOURCE "src/*.cpp")
-
-################################################
-add_executable(mensagem ${SOURCE})
+target_include_directories(pet-fera PUBLIC include)
+add_executable(${PROJECT_NAME} src/pet_driver.cpp)
+target_link_libraries(${PROJECT_NAME} PRIVATE pet-fera)

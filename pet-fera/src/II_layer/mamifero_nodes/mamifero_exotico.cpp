@@ -1,7 +1,7 @@
-#include "../../../include/II_layer/mamifero_nodes/mamifero_nativo.h"
+#include "../../../include/II_layer/mamifero_nodes/mamifero_exotico.h"
 
 // Constructor & Destructors
-Mamifero_nativo::Mamifero_exotico()
+Mamifero_exotico::Mamifero_exotico()
 {/*empty*/}
 
-Mamifero_nativo::~Mamifero_exotico() = default;
+Mamifero_exotico::~Mamifero_exotico() = default;
