@@ -11,8 +11,9 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 # libraris
 
-add_library(pete-fera STATIC
-    src/animal.cpp
+set(SOURCES 
+    src/animal.cpp 
+    src/pet_driver.cpp)
     src/I_layer/anfibio.cpp
     src/I_layer/ave.cpp
     src/I_layer/mamifero.cpp
@@ -26,6 +27,8 @@ add_library(pete-fera STATIC
     src/II_layer/reptil_nodes/reptil_exotico.cpp
     src/II_layer/reptil_nodes/reptil_nativo.cpp)
 
-target_include_directories(pet-fera PUBLIC include)
-add_executable(${PROJECT_NAME} src/pet_driver.cpp)
-target_link_libraries(${PROJECT_NAME} PRIVATE pet-fera)
+add_executable(${PROJECT_NAME} ${SOURCES})
+
+target_include_directories(
+    ${PROJECT_NAME}
+    PRIVATE ${PROJECT_SOURCE_DIR}/include)

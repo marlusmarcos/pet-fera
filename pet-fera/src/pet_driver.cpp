@@ -4,10 +4,10 @@
 
 int main(void)
 {
-    Anfibio generic;
+    Animal generic;
 
-    generic.setTotalMudas(11111);
-    std::cout << "This is the id of animal:" << generic.getTotalMudas() << std::endl;
+    generic.set_id(11111);
+    std::cout << "This is the id of animal:" << generic.get_id() << std::endl;
 
     return 0x0;
 }
