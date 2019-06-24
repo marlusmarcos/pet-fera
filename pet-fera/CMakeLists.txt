@@ -13,7 +13,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 set(SOURCES 
     src/animal.cpp 
-    src/pet_driver.cpp)
+    src/pet_driver.cpp
     src/I_layer/anfibio.cpp
     src/I_layer/ave.cpp
     src/I_layer/mamifero.cpp

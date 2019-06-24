@@ -1,6 +1,7 @@
 #include "../../include/I_layer/reptil.h"
 
 Reptil::Reptil()
+{/* empty */}
 
 Reptil::~Reptil() = default;
 

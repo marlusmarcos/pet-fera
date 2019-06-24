@@ -1,11 +1,16 @@
 #ifndef __ANIMAL_NATIVO_H__ 
 #define __ANIMAL_NATIVO_H__ 
 
-#include "../animal.h"
 
-class Animal_nativo
+#include "../../include/II_layer/ave_nodes/ave_nativa.h"
+#include "../../include/II_layer/reptil_nodes/reptil_nativo.h"
+#include "../../include/II_layer/anfibio_nodes/anfibio_nativo.h"
+#include "../../include/II_layer/mamifero_nodes/mamifero_nativo.h"
+
+
+class Animal_nativo : Ave_nativa, Mamifero_nativo, Anfibio_nativo, Reptil_nativo
 {
-    private:
+    protected:
 	std::string m_uf_origem;
 	std::string m_autorization;
 
