@@ -644,42 +644,16 @@ void GerenciarFuncionario::veterinario() {
 
 class GerenciarAnimal { //essa classe serve para um suporte aoo menu, é aqui onde será colocada no map o animal
 	public:
-	    template<typename T>
-		void mamifero();
-		void ave();
-		void reptil();
-		void anfibio();
+	    template<typename Classe>
+		void animal();
 };
 
-template<typename T>
-void GerenciarAnimal::mamifero(){
-	T *m1 = new T();
-	cout << "o id do animal é: " << m1->getId() <<"\n";
+template<typename Classe>
+void GerenciarAnimal::animal(){
+	Classe * ptr = new Classe();
+	cout << "o id do animal é: " << ptr->getId() <<"\n";
 	//add no map de mamifero
-	delete m1;
-}
-void GerenciarAnimal::anfibio() {
-	Anfibio *m1 = new Anfibio();
-	cout << "o id do animal é: " << m1->getId() <<"\n";
-	//add no map de manfibio
-	delete m1;
-}
-
-
-void GerenciarAnimal::reptil() {
-	Reptil *m1 = new Reptil();
-	cout << "o id do animal é: " << m1->getId() <<"\n";
-	//add no map de manfibio
-	delete m1;
-}
-
-
-
-void GerenciarAnimal::ave(){
-	Ave *m1 = new Ave();
-	cout << "o id do animal é: " << m1->getId() <<"\n";
-	//add no map de ave
-	delete m1;
+	delete ptr;
 }
 
 class Menu {
@@ -727,7 +701,7 @@ void Menu::meu_menu() {
 void Menu::cadastrarAnimal(){
 
 	int entrada;
-	GerenciarAnimal nome;
+	GerenciarAnimal g;
 
 	cout<<"1. Mamifero " << endl;
 	cout<<"2. Ave " << endl;
@@ -742,35 +716,59 @@ void Menu::cadastrarAnimal(){
     case 0:
         return meu_menu();
 	case 1:
-		cout << "opcao " << entrada;
 		cout << "1. Mamífero Nativo\n" << "2. Mamífero Exótico" << endl;
         cin >> entrada;
         switch(entrada){
             case 1:
-                nome.mamifero<Mamifero_nativo>();
+                g.animal<Mamifero_nativo>();
+                break;
+            case 2:
+                g.animal<Mamifero_exotico>();
                 break;
         }
-		//nome.mamifero();
 		break;
-	case 2:
-		cout << " opcao " << entrada;
-		nome.ave();
+    case 2:
+		cout << "1. Ave Nativa\n" << "2. Ave Exótica" << endl;
+        cin >> entrada;
+        switch(entrada){
+            case 1:
+                g.animal<Ave_nativa>();
+                break;
+            case 2:
+                g.animal<Ave_exotica>();
+                break;
+        }
 		break;
-	case 3:
-		cout << "opcao " << entrada;
-		nome.anfibio();
+    case 3:
+		cout << "1. Anfíbio Nativo\n" << "2. Anfíbio Exótico" << endl;
+        cin >> entrada;
+        switch(entrada){
+            case 1:
+                g.animal<Anfibio_nativo>();
+                break;
+            case 2:
+                g.animal<Anfibio_exotico>();
+                break;
+        }
 		break;
-	case 4:
-		cout << "opcao " << entrada;
-		nome.reptil();
+    case 4:
+		cout << "1. Reptil Nativo\n" << "2. Reptil Exótico" << endl;
+        cin >> entrada;
+        switch(entrada){
+            case 1:
+                g.animal<Reptil_nativo>();
+                break;
+            case 2:
+                g.animal<Reptil_exotico>();
+                break;
+        }
 		break;
 	default:
 		cout << "Opcao  " << entrada << " invalida. ";
 		return cadastrarAnimal();
 		break;
-
-
 	}
+
 };
 
 
